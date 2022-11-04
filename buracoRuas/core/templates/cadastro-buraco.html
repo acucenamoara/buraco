@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="form">
+            <form action="#" method="POST">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <button><a href="{%url 'index'%}">Voltar</a></button>
+                    </div>
+                </div>
+                        <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname">Endereço</label>
+                        <input id="firstname" type="text" name="firstname" placeholder="Digite o endereço" required>
+                    </div>
+                           
+                    <div class="input-box">
+                        <label for="email">Bairro</label>
+                        <input id="email" type="email" name="email" placeholder="Digite o bairro" required>
+                    </div>
+                                 <div class="input-box">
+                        <label for="email">Situação</label>
+                        <select name="situacao" id="password" >
+                            <option value="Critica">Crítica</option>
+                            <option value="Moderada">Moderada</option>
+                            <option value="Leve">Leve</option>
+                          </select>
+                    </div>
+                        </div>
+                       
+                        <div class="continue-button">
+                    <button><a href="#">Cadastrar</a> </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+    
+{%endblock content%}

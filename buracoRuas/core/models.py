@@ -24,9 +24,10 @@ class ruas(models.Model):
     verbose_name_plural = "Ruas"
 
 class buracos(models.Model): 
-  bu_ru_rua = models.ForeignKey('ruas', on_delete=models.CASCADE, default=1) 
-  bu_ba_bairro = models.ForeignKey('bairros', on_delete=models.CASCADE, default=1) 
-  bu_situ_situacao = models.ForeignKey('situacoes', on_delete=models.CASCADE, default=1)
+  bu_ru_rua = models.ForeignKey("ruas", on_delete=models.CASCADE, default=1) 
+  bu_ba_bairro = models.ForeignKey("bairros", on_delete=models.CASCADE, default=1) 
+  bu_situ_situacao = models.ForeignKey("situacoes", on_delete=models.CASCADE, default=1)
+  bu_status = models.BooleanField("Status", default=False)
   class Meta:
     unique_together = ('bu_ru_rua', 'bu_ba_bairro', 'bu_situ_situacao')
     verbose_name_plural = "Buracos"
