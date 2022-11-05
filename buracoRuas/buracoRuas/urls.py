@@ -22,5 +22,6 @@ urlpatterns = [
     path('', index, name="index"),
     path('cadastro-buraco', cadastro_buraco, name="cadastro_buraco"),
     path('administrador', administrador, name="administrador"),
-    path('editar-buraco/<int:id>', editar_buraco, name="editar_buraco"),
+    path('editar/<int:id>', editar, name="editar"),
+    path('deletar/<int:id>', deletar, name="deletar")
 ]

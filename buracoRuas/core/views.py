@@ -19,7 +19,7 @@ def cadastro_buraco(request):
  pacote = {"buracoForm":form}
  return render(request, "cadastro-buraco.html", pacote)
 
-def editar_buraco(request, id):
+def editar(request, id):
   buraco = buracos.objects.get(pk=id)
   form = buracoForm(request.POST or None, instance = buraco)
   if form.is_valid():
@@ -28,3 +28,7 @@ def editar_buraco(request, id):
   pacote = {"buracoForm": form}
   return render(request, "editar-buraco.html", pacote)
   
+def deletar(request, id):
+  buraco = buracos.objects.get(pk=id)
+  buraco.delete()
+  return redirect("index")
