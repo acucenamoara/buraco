@@ -17,21 +17,23 @@
                             <th>Bairro</th>
                             <th>Situação</th>
                             <th>Gravidade</th>
+                            
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row"></th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
+                        {% for buraco in buraco %}
+                        <tr>                          
+                          <td>{{buraco.bu_rua}}</td>
+                          <td>{{buraco.bu_bairro}}</td>
+                          <td>{{buraco.bu_status}}</td>                        
+                          <td>{{buraco.bu_gravidade}}</td>                                                  
                         </tr>
-                        <tr>
-                          <th scope="row"></th>
-                          <td></td>
-                          <td></td>
-                          <td></td>
-                        </tr>
+                        {%endfor%}
+Situ                 Stt  
+1 = leve              0 = não 
+2 = moderada          1 = sim
+3 = critica 
+                        
                       </tbody>
                     </table>
                 </div>

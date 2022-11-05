@@ -21,8 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="index"),
     path('cadastro-buraco', cadastro_buraco, name="cadastro_buraco"),
-    path('administrador', administrador, name="administrador")
-
-
-
+    path('administrador', administrador, name="administrador"),
+    path('editar-buraco/<int:id>', editar_buraco, name="editar_buraco"),
 ]

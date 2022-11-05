@@ -32,24 +32,25 @@
                             <th>Ações</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                            
-                            <td>vasco</td>
-                            <td>vasco</td>
-                            <td>vasco</td>
-                            <td>vasco</td>                            
-                            <td>
+                      <tbody>                            
+                            {% for buraco in buraco %}
+                            <tr>                          
+                              <td>{{buraco.bu_rua}}</td>
+                              <td>{{buraco.bu_bairro}}</td>
+                              <td>{{buraco.bu_situacao}}</td>
+                              <td>{{buraco.bu_status}}</td>
+                              <td> 
                                 <div class="login-button d-inline-block">
-                                    <button><a href="">Editar</a></button>
+                                    <button><a href="{% url 'editar_buraco' buraco.id  %}">Editar</a></button>
                                 </div>
                                 <div class="login-button d-inline-block">
                                     <button><a href="">Excluir</a></button>
                                 </div>
-                            </td>
-                            
-                            
-                          </tr>
+                             </td>                         
+                            </tr>
+                            {%endfor%}                                         
+                          
+                        
                       </tbody>
                     </table>
                 </div>
