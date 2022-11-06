@@ -38,7 +38,7 @@ class buracos(models.Model):
     ["Nao Consertado", "Não Consertado"],
     ["Consertado", "Consertado"]
   ]
-  
+  bu_quantia = models.IntegerField("Quantia", blank=False, null=False, default=1)
   bu_gravidade = models.CharField("Gravidade", choices=GRAVIDADE_CHOICES, max_length=100)
   bu_rua = models.CharField("Rua", max_length=255, blank=False, null=False) 
   bu_bairro = models.CharField("Bairro", max_length=255, blank=False, null=False)

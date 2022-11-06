@@ -27,6 +27,7 @@
                         <tr>
                             <th>Endereço</th>
                             <th>Bairro</th>
+                            <th>Quantia</th>
                             <th>Situação</th>
                             <th>Localização</th>
                             <th>Ações</th>
@@ -37,16 +38,17 @@
                             <tr>                          
                                 <td>{{buraco.bu_rua}}</td>
                                 <td>{{buraco.bu_bairro}}</td>
+                                <td>{{buraco.bu_quantia}}</td>
                                 <td>{{buraco.bu_status}}</td>                        
                                 <td>{{buraco.bu_gravidade}}</td>   
-                              <td> 
-                                <div class="login-button d-inline-block">
-                                    <button><a href="{% url 'editar' buraco.id  %}">Editar</a></button>
-                                </div>
-                                <div class="login-button d-inline-block">
-                                    <button><a href="{% url 'deletar' buraco.id %}">Excluir</a></button>
-                                </div>
-                             </td>                         
+                                <td> 
+                                    <div class="login-button d-inline-block">
+                                        <button><a href="{% url 'editar' buraco.id  %}">Editar</a></button>
+                                    </div>
+                                    <div class="login-button d-inline-block">
+                                        <button><a href="{% url 'deletar' buraco.id %}">Excluir</a></button>
+                                    </div>
+                                </td>                         
                             </tr>
                             {%endfor%}                                         
                           
